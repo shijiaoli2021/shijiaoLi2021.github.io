@@ -214,6 +214,116 @@
             
 
   
+    <article id="post-k-近邻算法原理与实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/11/06/k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/" target="_blank">k-近邻算法原理与实现</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/11/06/k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+        <time datetime="2021-11-06T08:36:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-06</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <span id="more"></span>
+
+<p>  <strong>简介：k近邻法（k-nearest neighbor,k-NN）是一种基本分类与回归方法，它的原理是，对给定的训练数据集，对新的输入实例，在训练数据集中找到与该实例</strong>最近邻的k个实例，依据“少数服从多数”的原则，根据这k个实例中占多数的类，就把该实例分为这个类。从上面简介可以看出，k-NN算法实际上是利用训练数据集对特征空间进行划分。在k-NN分类方法中，k值的选择、实例之间距离的度量及分类决策规则<strong>是k近邻法的三个基本要素 。</strong></p>
+<p><img src="/images/k%E4%B8%B4%E8%BF%91%E5%8F%82%E6%95%B0.JPG"></p>
+<p>实现代码如下：</p>
+<p><img src="/images/k%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95.JPG"></p>
+<p>但是，普通的k-NN算法一般不能很好的解决实际问题，因为不同变量对最终的结果权重并不相同，故运用K-NN算法通常需要伴随标准化处理。</p>
+<p>一般的归一化的公式如下：</p>
+<p><img src="/images/%E5%BD%92%E4%B8%80.JPG"></p>
+<p>但若最大值与最小值相差越大，运用该归一化的方法效果并不理想。</p>
+<p>标准化公式：</p>
+<p><img src="/images/%E6%A0%87%E5%87%86%E5%8C%96.JPG"></p>
+<p>分别需要计算的是均值和标准差。</p>
+<p>在python中可以用：sklearn.StandardScaler函数实现</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">K-近邻 机器学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/python数据分析//" class="article-tag-list-link color1">python数据分析</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/11/06/k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-pandas库相关函数使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -243,7 +353,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p><font face="黑体" color=purple size=5.5>是Pandas是强大的分析结构化数据工具集，基于Numpy构建，提供了高级数据结构和数据操作工具。</font></p>
+    <p><font face="宋体" color=purple size=5.5>是Pandas是强大的分析结构化数据工具集，基于Numpy构建，提供了高级数据结构和数据操作工具。相关学习链接：<a target="_blank" rel="noopener" href="https://www.pypandas.cn/docs/">https://www.pypandas.cn/docs/</a></font></p>
     
     <a class="article-more-a" href="/2021/11/03/pandas%E5%BA%93%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/#more">more >></a>
     
@@ -644,11 +754,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">pandas</a>
+                <a href="javascript:void(0)" class="js-tag color5">K-近邻 机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">numpy</a>
+                <a href="javascript:void(0)" class="js-tag color2">pandas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -657,6 +767,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">交流发电机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">numpy</a>
               </li>
             
             <div class="clearfix"></div>
