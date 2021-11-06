@@ -243,21 +243,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <span id="more"></span>
-
-<p>  <strong>简介：k近邻法（k-nearest neighbor,k-NN）是一种基本分类与回归方法，它的原理是，对给定的训练数据集，对新的输入实例，在训练数据集中找到与该实例</strong>最近邻的k个实例，依据“少数服从多数”的原则，根据这k个实例中占多数的类，就把该实例分为这个类。从上面简介可以看出，k-NN算法实际上是利用训练数据集对特征空间进行划分。在k-NN分类方法中，k值的选择、实例之间距离的度量及分类决策规则<strong>是k近邻法的三个基本要素 。</strong></p>
-<p><img src="/images/k%E4%B8%B4%E8%BF%91%E5%8F%82%E6%95%B0.JPG"></p>
-<p>实现代码如下：</p>
-<p><img src="/images/k%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95.JPG"></p>
-<p>但是，普通的k-NN算法一般不能很好的解决实际问题，因为不同变量对最终的结果权重并不相同，故运用K-NN算法通常需要伴随标准化处理。</p>
-<p>一般的归一化的公式如下：</p>
-<p><img src="/images/%E5%BD%92%E4%B8%80.JPG"></p>
-<p>但若最大值与最小值相差越大，运用该归一化的方法效果并不理想。</p>
-<p>标准化公式：</p>
-<p><img src="/images/%E6%A0%87%E5%87%86%E5%8C%96.JPG"></p>
-<p>分别需要计算的是均值和标准差。</p>
-<p>在python中可以用：sklearn.StandardScaler函数实现</p>
-
+    <p> <strong>简介：k近邻法（k-nearest neighbor,k-NN）是一种基本分类与回归方法，它的原理是，对给定的训练数据集，对新的输入实例，在训练数据集中找到与该实例</strong>最近邻的k个实例，依据“少数服从多数”的原则，根据这k个实例中占多数的类，就把该实例分为这个类。</p>
+    
+    <a class="article-more-a" href="/2021/11/06/k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E7%8E%B0/#more">more >></a>
+    
     
 
     
