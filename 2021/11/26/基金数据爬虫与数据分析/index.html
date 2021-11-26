@@ -6,17 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://shijiaoLi2021.github.io">
-  <title>Tag: 机器学习 | Hexo</title>
+  <title>基金数据爬虫与数据分析 | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://shijiaoli2021.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.html">
+  <meta name="description" content="​    &#x3D;&#x3D;这篇文章主要为大家分享对基金数据的爬取，并通过python对获取的基金数据做一定的数据分析，如净值数据绘图，周均值，月均值的计算，及搜寻处于下降态势的基金，通过这些方法能对基金的买入与卖出提供一定的辅助作用！最后还是建议大家尽量不要盲目相信数据分析结果或者群众引导而进行买入和卖出，一定要结合自身对该基金或者股票的思考来考虑是否进行买入和卖出操作。&#x3D;&#x3D;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基金数据爬虫与数据分析">
+<meta property="og:url" content="http://shijiaoli2021.github.io/2021/11/26/%E5%9F%BA%E9%87%91%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="​    &#x3D;&#x3D;这篇文章主要为大家分享对基金数据的爬取，并通过python对获取的基金数据做一定的数据分析，如净值数据绘图，周均值，月均值的计算，及搜寻处于下降态势的基金，通过这些方法能对基金的买入与卖出提供一定的辅助作用！最后还是建议大家尽量不要盲目相信数据分析结果或者群众引导而进行买入和卖出，一定要结合自身对该基金或者股票的思考来考虑是否进行买入和卖出操作。&#x3D;&#x3D;">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%911.JPG">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%912.jpg">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%913.JPG">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%914.JPG">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%915.jpg">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%916.jpg">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E5%9F%BA%E9%87%91%E6%95%B0%E6%8D%AE%E8%A1%A8.JPG">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E5%9F%BA%E9%87%91%E7%BB%98%E5%9B%BE.png">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E5%9F%BA%E9%87%91%E4%BB%A3%E7%A0%81%E8%A1%A8.JPG">
+<meta property="og:image" content="http://shijiaoli2021.github.io/images/%E4%B8%8B%E9%99%8D%E6%80%81%E5%8A%BF.gif">
+<meta property="article:published_time" content="2021-11-26T04:37:16.000Z">
+<meta property="article:modified_time" content="2021-11-26T07:02:48.577Z">
 <meta property="article:author" content="ShiJiao Li">
+<meta property="article:tag" content="基金">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://shijiaoli2021.github.io/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%911.JPG">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -207,80 +223,316 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-基金数据爬虫与数据分析" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/10/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-        <time datetime="2021-10-18T03:23:28.248Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-18</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/10/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" target="_blank">基于机器学习算法对汽车用交流发电机的温度预测与软件开发</a>
   
+    <h1 class="article-title" itemprop="name">
+      基金数据爬虫与数据分析
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2021/11/26/%E5%9F%BA%E9%87%91%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="archive-article-date">
+        <time datetime="2021-11-26T04:37:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-26</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">3.3k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">14分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>​    ==这篇文章主要为大家分享对基金数据的爬取，并通过python对获取的基金数据做一定的数据分析，如净值数据绘图，周均值，月均值的计算，及搜寻处于下降态势的基金，通过这些方法能对基金的买入与卖出提供一定的辅助作用！最后还是建议大家尽量不要盲目相信数据分析结果或者群众引导而进行买入和卖出，一定要结合自身对该基金或者股票的思考来考虑是否进行买入和卖出操作。==</p>
+<span id="more"></span>
+
+<p>[toc]</p>
+<h2 id="1-基金数据爬取"><a href="#1-基金数据爬取" class="headerlink" title="1.基金数据爬取"></a>1.基金数据爬取</h2><h3 id="1-工具准备："><a href="#1-工具准备：" class="headerlink" title="1.工具准备："></a>1.工具准备：</h3><p>​        在此主要应用python进行爬虫，主要会应用的包如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup                  <span class="comment">#进行网页解析获取数据</span></span><br><span class="line"><span class="keyword">import</span> re                                      <span class="comment">#正则表达式，进行文字匹配</span></span><br><span class="line"><span class="keyword">import</span> urllib.request,urllib.error             <span class="comment">#制定URL。获取网页数据</span></span><br><span class="line"><span class="keyword">import</span> xlwt                                    <span class="comment">#进行excel操作</span></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> xlrd</span><br></pre></td></tr></table></figure>
+
+<p>其中bs4包主要用于网页解析数据，re包用于语言正则化，用requests来获取网页数据。而以下的包主要用于数据分析，如果只想爬取基金数据，以上的包就已经足够了。数据分析包，pandas，numpy主要用于数组矩阵分析等数值计算；matpoltlib主要用于绘图，与matlab相关绘图方法和函数类似，学过或者用过matlab的朋友对此并不困难，各个数据分析的包处理方法都比较友好，易上手。</p>
+<h3 id="2-数据爬虫流程："><a href="#2-数据爬虫流程：" class="headerlink" title="2.数据爬虫流程："></a>2.数据爬虫流程：</h3><p>​    所谓，爬虫，即万千的网页，就像一张巨大的网，网中不同的节点存储着各种各样的数据，如新闻，基金，股票，游戏，图片等等。我们通过计算机的手段在指定的节点处快速获取我们想要的信息即爬虫。</p>
+<p>​    爬虫的基本流程：模拟浏览器发送请求（获取网页代码）-&gt;通过正则表达式或其他方法提取有用数据-&gt;存放于数据库或者文件中</p>
+<h3 id="3-基金网站的选择："><a href="#3-基金网站的选择：" class="headerlink" title="3.基金网站的选择："></a>3.基金网站的选择：</h3><p>明确了爬虫流程，我们还需要找到合适的基金网站，因为目前很多网站为了防止信息泄露，进行了反爬虫手段；比如建立浏览身份头user-agent的白名单，只有浏览时使用白名单范围内的user-agent才能有效访问。当然对此我们也可以通过伪装白名单的浏览器的手段来浏览网页；除此之外，反爬虫技术还有很多，如IP限制，JS脚本来防止爬虫等等。</p>
+<p>当然，如果在爬虫的开始，我们就能找到具有目标信息且较友好的网站即是最好最方便的！</p>
+<p>在此我们选择的基金网站是蛋卷基金网站：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.danjuanapp.com/</span><br></pre></td></tr></table></figure>
+
+<p>网络页面如下：</p>
+<p><img src="/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%911.JPG"></p>
+<p>​    首先我们随意选择一个基金，进入其净值所在的网页下：</p>
+<p><img src="/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%912.jpg"></p>
+<p><img src="/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%913.JPG"></p>
+<p>进入后，点击ctrl+shift+c查看网页代码，并点击网络(net)属性,：</p>
+<p><img src="/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%914.JPG"></p>
+<p>进行网页刷新，点击XHR：</p>
+<p><img src="/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%915.jpg"></p>
+<p>在这里可以看到数据传送的网页，你可以尝试点击查看能否顺利打开，可以发现其能顺利打开，包含基金的净值，百分比，时间信息，且该网址有章可循，能为后期的爬虫处理带来方便：</p>
+<p><img src="/images/%E8%9B%8B%E5%8D%B7%E5%9F%BA%E9%87%916.jpg"></p>
+<p>在此我们便找到了想要爬虫的网站网址及编写方法:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://danjuanapp.com/djapi/fund/nav/history/（基金代码）?size=30&amp;page=1（页数）</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-数据爬虫："><a href="#4-数据爬虫：" class="headerlink" title="4.数据爬虫："></a>4.数据爬虫：</h3><p>​    有了数据爬取的网址编写方法，接下来我们就可以轻松的开始爬取网页数据了；</p>
+<p>（1）    首先定义网页与发送访问请求的user-agent：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">url=<span class="string">&quot;https://danjuanapp.com/djapi/fund/nav/history/&quot;</span></span><br><span class="line">guding=<span class="string">&quot;?size=30&amp;page=&quot;</span></span><br><span class="line">header=&#123;<span class="string">&quot;User-Agent&quot;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; WOW64) &quot;</span></span><br><span class="line">        <span class="string">&quot;AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这里我们将该网址分成url和guding两端写，当我们想访问确定代码的网址时就可以通过以下方式来访问：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url+(基金代码)+guding</span><br></pre></td></tr></table></figure>
+
+<p>（2）接下来利用requests进行网页数据获取及正则化表达处理，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">url=url+daima+guding</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;正在爬取基金数据代号：&quot;</span>,daima)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">31</span>):</span><br><span class="line">    urll=url+<span class="built_in">str</span>(i)</span><br><span class="line">    <span class="built_in">print</span>(urll)</span><br><span class="line">    req=urllib.request.Request(url=urll,headers=header)			<span class="comment">#制定url，获取网页数据</span></span><br><span class="line">    response=urllib.request.urlopen(req)</span><br><span class="line">    html=response.read().decode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">    date=date+re.findall(<span class="string">r&#x27;&quot;date&quot;:&quot;(.*?)&quot;&#x27;</span>,html)				<span class="comment">#正则化表达式，分别找到日期，净值，百分比数据</span></span><br><span class="line">    value=value+re.findall(<span class="string">r&#x27;&quot;value&quot;:&quot;(.*?)&quot;&#x27;</span>,html)</span><br><span class="line">    percentage=percentage+re.findall(<span class="string">r&#x27;&quot;percentage&quot;:&quot;(.*?)&quot;&#x27;</span>,html)</span><br></pre></td></tr></table></figure>
+
+<p>（3）剩下的就是数据存储了，这里将每个代码的基金放入每个创建的excel表中，以便我们后期进行分析使用。该段代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">savepath=<span class="string">&quot;./&quot;</span>+daima+<span class="string">&quot;.xls&quot;</span></span><br><span class="line">name=daima</span><br><span class="line">book = xlwt.Workbook(encoding=<span class="string">&quot;utf-8&quot;</span>,style_compression=<span class="number">0</span>)  <span class="comment"># 创建workbook对象</span></span><br><span class="line">sheet = book.add_sheet(name,cell_overwrite_ok=<span class="literal">True</span>)  <span class="comment"># 创建工作表</span></span><br><span class="line">col=(<span class="string">&quot;日期&quot;</span>,<span class="string">&quot;百分比增减&quot;</span>,<span class="string">&quot;净值&quot;</span>)</span><br><span class="line">num= <span class="built_in">len</span>(date)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">3</span>):</span><br><span class="line">    sheet.write(<span class="number">0</span>,i,col[i])  <span class="comment">#列名</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,num):</span><br><span class="line">    j=num-i</span><br><span class="line">    <span class="comment">#print(&quot;爬取&quot;, date[j-1])</span></span><br><span class="line">    sheet.write(i+<span class="number">1</span>,<span class="number">0</span>,date[j-<span class="number">1</span>])</span><br><span class="line">    sheet.write(i+<span class="number">1</span>,<span class="number">1</span>,percentage[j-<span class="number">1</span>])</span><br><span class="line">    sheet.write(i+<span class="number">1</span>,<span class="number">2</span>,value[j-<span class="number">1</span>])</span><br><span class="line">book.save(savepath)  <span class="comment"># 保存数据表</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;爬取成功！&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>(4)运行结果，通过以上步骤，我们将能对特定代号的基金进行数据提取，并存入excel表中，对应excel表的名称为该基金的代码，结果如下：</p>
+<p><img src="/images/%E5%9F%BA%E9%87%91%E6%95%B0%E6%8D%AE%E8%A1%A8.JPG"></p>
+<p>（5）将上述步骤结合起来，编写成函数，主要参数即为需要爬取的基金代码，返回爬取基金数据的excel表，函数代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;基金数据爬取函数，主要参数输入基金代码，完成该基金数据获取&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">jijinspider</span>(<span class="params">daima=<span class="string">&quot;160002&quot;</span></span>):</span></span><br><span class="line">    <span class="comment">#获取网页</span></span><br><span class="line">    <span class="comment">#daima=int(daima)</span></span><br><span class="line">    url=<span class="string">&quot;https://danjuanapp.com/djapi/fund/nav/history/&quot;</span><span class="comment">#https://danjuanapp.com/djapi/fund/nav/history/004194?size=30&amp;page=1</span></span><br><span class="line">    guding=<span class="string">&quot;?size=30&amp;page=&quot;</span></span><br><span class="line">    header=&#123;<span class="string">&quot;User-Agent&quot;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; WOW64) &quot;</span></span><br><span class="line">                          <span class="string">&quot;AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36&quot;</span>&#125;</span><br><span class="line">    date=[]</span><br><span class="line">    value=[]</span><br><span class="line">    percentage=[]</span><br><span class="line">    url=url+daima+guding</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;正在爬取基金数据代号：&quot;</span>,daima)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">31</span>):</span><br><span class="line">        urll=url+<span class="built_in">str</span>(i)</span><br><span class="line">        <span class="built_in">print</span>(urll)</span><br><span class="line">        req=urllib.request.Request(url=urll,headers=header)</span><br><span class="line">        response=urllib.request.urlopen(req)</span><br><span class="line">        html=response.read().decode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">        date=date+re.findall(<span class="string">r&#x27;&quot;date&quot;:&quot;(.*?)&quot;&#x27;</span>,html)</span><br><span class="line">        value=value+re.findall(<span class="string">r&#x27;&quot;value&quot;:&quot;(.*?)&quot;&#x27;</span>,html)</span><br><span class="line">        percentage=percentage+re.findall(<span class="string">r&#x27;&quot;percentage&quot;:&quot;(.*?)&quot;&#x27;</span>,html)</span><br><span class="line">        <span class="comment">#print(date)</span></span><br><span class="line">    savepath=<span class="string">&quot;./&quot;</span>+daima+<span class="string">&quot;.xls&quot;</span></span><br><span class="line">    name=daima</span><br><span class="line">    book = xlwt.Workbook(encoding=<span class="string">&quot;utf-8&quot;</span>,style_compression=<span class="number">0</span>)  <span class="comment"># 创建workbook对象</span></span><br><span class="line">    sheet = book.add_sheet(name,cell_overwrite_ok=<span class="literal">True</span>)  <span class="comment"># 创建工作表</span></span><br><span class="line">    col=(<span class="string">&quot;日期&quot;</span>,<span class="string">&quot;百分比增减&quot;</span>,<span class="string">&quot;净值&quot;</span>)</span><br><span class="line">    num= <span class="built_in">len</span>(date)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">3</span>):</span><br><span class="line">        sheet.write(<span class="number">0</span>,i,col[i])  <span class="comment">#列名</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,num):</span><br><span class="line">        j=num-i</span><br><span class="line">        <span class="comment">#print(&quot;爬取&quot;, date[j-1])</span></span><br><span class="line">        sheet.write(i+<span class="number">1</span>,<span class="number">0</span>,date[j-<span class="number">1</span>])</span><br><span class="line">        sheet.write(i+<span class="number">1</span>,<span class="number">1</span>,percentage[j-<span class="number">1</span>])</span><br><span class="line">        sheet.write(i+<span class="number">1</span>,<span class="number">2</span>,value[j-<span class="number">1</span>])</span><br><span class="line">    book.save(savepath)  <span class="comment"># 保存数据表</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;爬取成功！&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-基金数据月均值，周均值分析及净值绘图"><a href="#2-基金数据月均值，周均值分析及净值绘图" class="headerlink" title="2.基金数据月均值，周均值分析及净值绘图"></a>2.基金数据月均值，周均值分析及净值绘图</h2><p>根据基金数据的爬取，我们就可以对基金数据进行一定的分析和操作，目前，我对基金数据进行了月均值分析，周均值分析以及净值绘图，当然也还可以对百分比进行绘图或进行其他的数据分析，感兴趣的朋友可以接着这里继续进行数据分析，来使买入的基金对自己利益最大化。</p>
+<p>（1）周均值分析,主要参数为excel表格，返回周均值列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;基金周均值分析，主要参数为excel表格，返回周均值列表&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">weekavr</span>(<span class="params">sheetpath</span>):</span></span><br><span class="line">    jijinshu=pd.read_excel(sheetpath,skiprows=<span class="number">1</span>,usecols=[<span class="number">1</span>,<span class="number">2</span>])</span><br><span class="line">    jijinshuju=np.array(jijinshu)</span><br><span class="line">    <span class="comment">#jijinshuju=np.loadtxt(sheetname,skiprows=1,usecols=[1,2],encoding=&#x27;utf-8&#x27;)</span></span><br><span class="line">    <span class="comment">#print(jijinshuju)</span></span><br><span class="line">    shujusize=jijinshuju.shape</span><br><span class="line">    <span class="comment">#print(shujusize[0])</span></span><br><span class="line">    weekavre=[]</span><br><span class="line">    avrshu=<span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,shujusize[<span class="number">0</span>]):</span><br><span class="line">        <span class="keyword">if</span> i%<span class="number">7</span>!=<span class="number">6</span>:</span><br><span class="line">            avrshu=avrshu+jijinshuju[i,<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">elif</span> i==shujusize[<span class="number">0</span>]-<span class="number">1</span> <span class="keyword">and</span> i%<span class="number">7</span>!=<span class="number">6</span>:</span><br><span class="line">            j=i%<span class="number">7</span></span><br><span class="line">            avrshu = avrshu + jijinshuju[i, <span class="number">1</span>]</span><br><span class="line">            avrshu=avrshu/(j+<span class="number">1</span>)</span><br><span class="line">            weekavre.append(avrshu)</span><br><span class="line">            avrshu=<span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            avrshu = avrshu + jijinshuju[i, <span class="number">1</span>]</span><br><span class="line">            avrshu = avrshu /<span class="number">7</span></span><br><span class="line">            weekavre.append(avrshu)</span><br><span class="line">            avrshu = <span class="number">0</span></span><br><span class="line">    <span class="comment">#print(monthavr)</span></span><br><span class="line">    <span class="keyword">return</span>  weekavre</span><br></pre></td></tr></table></figure>
+
+<p>(2)月均值分析,主要参数为excel表格，返回周均值列表</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;月均值函数，这个函数主要返回基金每月均值，输入主要参数为基金存储表格路径&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">monthavr</span>(<span class="params">sheetpath</span>):</span></span><br><span class="line">    jijinshu = pd.read_excel(sheetpath, skiprows=<span class="number">1</span>, usecols=[<span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line">    jijinshuju = np.array(jijinshu)</span><br><span class="line">    <span class="comment"># jijinshuju=np.loadtxt(sheetname,skiprows=1,usecols=[1,2],encoding=&#x27;utf-8&#x27;)</span></span><br><span class="line">    <span class="comment"># print(jijinshuju)</span></span><br><span class="line">    shujusize = jijinshuju.shape</span><br><span class="line">    <span class="comment"># print(shujusize[0])</span></span><br><span class="line">    monthavr = []</span><br><span class="line">    avrshu = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, shujusize[<span class="number">0</span>]):</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">30</span> != <span class="number">29</span>:</span><br><span class="line">            avrshu = avrshu + jijinshuju[i, <span class="number">1</span>]</span><br><span class="line">        <span class="keyword">elif</span> i == shujusize[<span class="number">0</span>] - <span class="number">1</span> <span class="keyword">and</span> i % <span class="number">30</span> != <span class="number">29</span>:</span><br><span class="line">            j = i % <span class="number">30</span></span><br><span class="line">            avrshu = avrshu + jijinshuju[i, <span class="number">1</span>]</span><br><span class="line">            avrshu = avrshu / (j + <span class="number">1</span>)</span><br><span class="line">            monthavr.append(avrshu)</span><br><span class="line">            avrshu = <span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            avrshu = avrshu + jijinshuju[i, <span class="number">1</span>]</span><br><span class="line">            avrshu = avrshu / <span class="number">30</span></span><br><span class="line">            monthavr.append(avrshu)</span><br><span class="line">            avrshu = <span class="number">0</span></span><br><span class="line">    <span class="comment"># print(monthavr)</span></span><br><span class="line">    <span class="keyword">return</span> monthavr</span><br></pre></td></tr></table></figure>
+
+
+
+<p>(3)净值，周均值变化绘图,主要参数为：周均值矩阵，基金数据excel表格名称，在使用时注意代码中的路径为当前文件路径，如果路径不一样，可以修改代码路径或修改表格路径到当前文件路径：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;这个函数主要用于画出基金几年时间段的数据变化趋势，主要参数为：周均值矩阵，基金数据excel表格&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">jijinplot</span>(<span class="params">sheetname,weekavr</span>):</span></span><br><span class="line">    imagename=sheetname</span><br><span class="line">    sheetname=<span class="string">&quot;./&quot;</span>+sheetname</span><br><span class="line">    jijinshuju=pd.read_excel(sheetname)</span><br><span class="line">    jijinshuju_now=np.array(jijinshuju)</span><br><span class="line">    num=<span class="built_in">len</span>(jijinshuju_now[:,<span class="number">1</span>])</span><br><span class="line">    plt.plot(jijinshuju_now[:,<span class="number">0</span>],jijinshuju_now[:,<span class="number">2</span>])</span><br><span class="line">    plt.xticks(<span class="built_in">range</span>(<span class="number">1</span>,num,<span class="number">75</span>), rotation=<span class="number">35</span>)</span><br><span class="line">    plt.title(imagename)</span><br><span class="line">    plt.xlabel(<span class="string">&quot;time&quot;</span>)</span><br><span class="line">    plt.ylabel(<span class="string">&quot;value&quot;</span>)</span><br><span class="line">    num=<span class="built_in">len</span>(weekavr)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,num):</span><br><span class="line">        xx=jijinshuju_now[<span class="number">7</span>*i:<span class="number">7</span>*i+<span class="number">7</span>,<span class="number">0</span>]</span><br><span class="line">        xx=np.array(xx)</span><br><span class="line">        <span class="comment">#print(xx)</span></span><br><span class="line">        yy=[weekavr[i],weekavr[i],weekavr[i],weekavr[i],weekavr[i],weekavr[i],weekavr[i]]</span><br><span class="line">        plt.plot(xx,yy)</span><br><span class="line"></span><br><span class="line">        <span class="comment">#plt.xticks([])</span></span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>效果如下图所示，净值变化折线与网站一致：</p>
+<p><img src="/images/%E5%9F%BA%E9%87%91%E7%BB%98%E5%9B%BE.png"></p>
+<h2 id="3-搜寻处于下降态势的基金"><a href="#3-搜寻处于下降态势的基金" class="headerlink" title="3.搜寻处于下降态势的基金"></a>3.搜寻处于下降态势的基金</h2><p>这一步，主要目的在于找到处于下降态势的基金，并输出。日常，大家都愿意将资金在基金或者股票处于低谷时进行投入，以期望在基金或股票上涨时牟取利益，这个函数主要作用就在于每次随机的搜寻处于下降态势的基金，并输出，供大家思考和选择。</p>
+<p>这个函数除以下代码外，需要所有基金的代码表，这个表可以通过百度获取，将它整理为excel表格如下图所示，并不困难，这里不再赘述。</p>
+<p><img src="/images/%E5%9F%BA%E9%87%91%E4%BB%A3%E7%A0%81%E8%A1%A8.JPG"></p>
+<p>以下为实现代码与运行效果图：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;下降基金代号获取函数，当前处于降低时期的基金,主要针对当前月均值，与周均值处于下降阶段，找到5个后停止，返回基金代号&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_decend</span>():</span></span><br><span class="line">    <span class="comment"># 获取网页</span></span><br><span class="line">    url = <span class="string">&quot;https://danjuanapp.com/djapi/fund/nav/history/&quot;</span>  <span class="comment"># https://danjuanapp.com/djapi/fund/nav/history/004194?size=30&amp;page=1</span></span><br><span class="line">    guding = <span class="string">&quot;?size=30&amp;page=&quot;</span></span><br><span class="line">    header = &#123;<span class="string">&quot;User-Agent&quot;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) &quot;</span></span><br><span class="line">                            <span class="string">&quot;Chrome/86.0.4240.198 Safari/537.36&quot;</span>&#125;</span><br><span class="line">    sheetpath = <span class="string">&quot;./基金代码.xlsx&quot;</span></span><br><span class="line">    jijinshu = pd.read_excel(sheetpath,dtype=<span class="built_in">str</span>)</span><br><span class="line">    <span class="comment"># jijinshu.info()</span></span><br><span class="line">    jijinshuju = np.array(jijinshu)</span><br><span class="line">    strr = jijinshuju[<span class="number">0</span>, <span class="number">0</span>].zfill(<span class="number">6</span>)</span><br><span class="line">    jijinshuju[<span class="number">0</span>, <span class="number">0</span>] = strr</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">4178</span>):</span><br><span class="line">        strr = jijinshuju[i, <span class="number">0</span>].zfill(<span class="number">6</span>)</span><br><span class="line">        jijinshuju[i, <span class="number">0</span>] = strr</span><br><span class="line">    date = []</span><br><span class="line">    value = []</span><br><span class="line">    percentage = []</span><br><span class="line">    yx_daima=[]</span><br><span class="line">    daima=<span class="string">&quot;&quot;</span></span><br><span class="line">    jiance=<span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (jiance&lt;<span class="number">5</span>) :</span><br><span class="line">        find_rand = np.random.randint(<span class="number">1000</span>, <span class="number">4179</span>, (<span class="number">1</span>, <span class="number">100</span>))</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">100</span>):</span><br><span class="line">            daima = jijinshuju[find_rand[<span class="number">0</span>,j],<span class="number">0</span>]</span><br><span class="line">            <span class="comment"># print(daima)</span></span><br><span class="line">            url0 = url + daima + guding</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;正在随机验证基金代码：&quot;</span>, jijinshuju[find_rand[<span class="number">0</span>,j],<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">                urll = url0 + <span class="built_in">str</span>(i)</span><br><span class="line">                <span class="comment">#print(urll)</span></span><br><span class="line">                req = urllib.request.Request(url=urll, headers=header)</span><br><span class="line">                html = <span class="string">&quot;&quot;</span></span><br><span class="line">                response = urllib.request.urlopen(req)</span><br><span class="line">                html = response.read().decode(<span class="string">&quot;utf-8&quot;</span>)</span><br><span class="line">                <span class="comment">#date = date + re.findall(r&#x27;&quot;date&quot;:&quot;(.*?)&quot;&#x27;, html)</span></span><br><span class="line">                value = value + re.findall(<span class="string">r&#x27;&quot;value&quot;:&quot;(.*?)&quot;&#x27;</span>, html)</span><br><span class="line">                percentage = percentage + re.findall(<span class="string">r&#x27;&quot;percentage&quot;:&quot;(.*?)&quot;&#x27;</span>, html)</span><br><span class="line">                <span class="comment"># print(date)</span></span><br><span class="line">            <span class="comment">#date=np.array(date)</span></span><br><span class="line">            <span class="comment">#value=np.array(value,dtype=float)</span></span><br><span class="line">            <span class="comment">#percentage=np.array(percentage)</span></span><br><span class="line">            shujusize = <span class="built_in">len</span>(value)</span><br><span class="line">            <span class="keyword">if</span> shujusize&lt;<span class="number">100</span>:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="comment"># print(value)</span></span><br><span class="line">            value_wk=[]</span><br><span class="line">            <span class="keyword">for</span> float_i <span class="keyword">in</span> value:</span><br><span class="line">                 value_wk.append(<span class="built_in">float</span>(float_i))</span><br><span class="line">            <span class="comment"># print(&quot;shujusize:&quot;,shujusize)</span></span><br><span class="line">            <span class="comment"># print(shujusize)</span></span><br><span class="line">            monthavr = []</span><br><span class="line">            avrshu = <span class="number">0.00</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, shujusize):</span><br><span class="line">                <span class="keyword">if</span> i % <span class="number">30</span> != <span class="number">29</span>:</span><br><span class="line">                    avrshu = avrshu + value_wk[i]</span><br><span class="line">                <span class="keyword">elif</span> i == shujusize - <span class="number">1</span> <span class="keyword">and</span> i % <span class="number">30</span> != <span class="number">29</span>:</span><br><span class="line">                    j = i % <span class="number">30</span></span><br><span class="line">                    avrshu = avrshu + value_wk[i]</span><br><span class="line">                    avrshu = avrshu / (j + <span class="number">1</span>)</span><br><span class="line">                    monthavr.append(avrshu)</span><br><span class="line">                    avrshu = <span class="number">0</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    avrshu = avrshu + value_wk[i]</span><br><span class="line">                    avrshu = avrshu / <span class="number">30</span></span><br><span class="line">                    monthavr.append(avrshu)</span><br><span class="line">                    avrshu = <span class="number">0</span></span><br><span class="line">            weekavre = []</span><br><span class="line">            avrshu = <span class="number">0</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, shujusize):</span><br><span class="line">                <span class="keyword">if</span> i % <span class="number">7</span> != <span class="number">6</span>:</span><br><span class="line">                    avrshu = avrshu + value_wk[i]</span><br><span class="line">                <span class="keyword">elif</span> i == shujusize - <span class="number">1</span> <span class="keyword">and</span> i % <span class="number">7</span> != <span class="number">6</span>:</span><br><span class="line">                    j = i % <span class="number">7</span></span><br><span class="line">                    avrshu = avrshu + value_wk[i]</span><br><span class="line">                    avrshu = avrshu / (j + <span class="number">1</span>)</span><br><span class="line">                    weekavre.append(avrshu)</span><br><span class="line">                    <span class="comment">#print(avrshu)</span></span><br><span class="line">                    avrshu = <span class="number">0</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    avrshu = avrshu + value_wk[i]</span><br><span class="line">                    avrshu = avrshu / <span class="number">7</span></span><br><span class="line">                    <span class="comment">#print(avrshu)</span></span><br><span class="line">                    weekavre.append(avrshu)</span><br><span class="line">                    avrshu = <span class="number">0</span></span><br><span class="line">            <span class="comment"># weekavre=np.array(weekavre)</span></span><br><span class="line">            <span class="comment"># monthavr=np.array(monthavr)</span></span><br><span class="line">            week_size=<span class="built_in">len</span>(weekavre)</span><br><span class="line">            month_size=<span class="built_in">len</span>(monthavr)</span><br><span class="line">            <span class="comment"># print(weekavre)</span></span><br><span class="line">            <span class="comment"># print(week_size)</span></span><br><span class="line">            percd_w=(weekavre[week_size-<span class="number">2</span>]-weekavre[week_size-<span class="number">1</span>])/weekavre[week_size-<span class="number">2</span>]</span><br><span class="line">            percd_m=(monthavr[month_size-<span class="number">2</span>]-monthavr[month_size-<span class="number">1</span>])/monthavr[month_size-<span class="number">1</span>]</span><br><span class="line">            <span class="keyword">if</span> percd_m&gt;<span class="number">0.2</span> <span class="keyword">and</span> percd_w&gt;<span class="number">0</span> <span class="keyword">and</span> monthavr[month_size-<span class="number">2</span>]&gt;<span class="number">3</span>:</span><br><span class="line">                yx_daima.append(jijinshuju[find_rand[<span class="number">0</span>,j],<span class="number">0</span>])</span><br><span class="line">                jiance = jiance + <span class="number">1</span></span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;找到第&quot;</span>,jiance,<span class="string">&quot;个基金代码为&quot;</span>,jijinshuju[find_rand[<span class="number">0</span>,j],<span class="number">0</span>],</span><br><span class="line">                      <span class="string">&quot;的&quot;</span>,jijinshuju[find_rand[<span class="number">0</span>,j],<span class="number">1</span>],<span class="string">&quot;处于下降态势，月下降态势为：&quot;</span>,percd_m,<span class="string">&quot;周下降态势为：&quot;</span>,percd_w)</span><br></pre></td></tr></table></figure>
+
+<p>在使用时，只需调用该函数即可，运行效果如下：</p>
+<p><img src="/images/%E4%B8%8B%E9%99%8D%E6%80%81%E5%8A%BF.gif"></p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/airplay.png">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixinfu.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          ShiJiao Li
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://shijiaoLi2021.github.io/2021/11/26/基金数据爬虫与数据分析/" title="基金数据爬虫与数据分析" target="_blank">http://shijiaoLi2021.github.io/2021/11/26/基金数据爬虫与数据分析/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">机器学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">交流发电机</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基金</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/机械//" class="article-tag-list-link color3">机械</a>
+        			<a href="/categories/python数据分析//" class="article-tag-list-link color1">python数据分析</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://shijiaoli2021.github.io/2021/11/26/%E5%9F%BA%E9%87%91%E6%95%B0%E6%8D%AE%E7%88%AC%E8%99%AB%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/11/22/%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">决策树与随机森林</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -321,9 +573,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
